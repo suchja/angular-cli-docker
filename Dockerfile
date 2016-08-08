@@ -7,3 +7,5 @@ ENV HOME=/home/app
 WORKDIR $HOME
 
 RUN npm install -g angular-cli@webpack && npm cache clean
+
+EXPOSE 4200
