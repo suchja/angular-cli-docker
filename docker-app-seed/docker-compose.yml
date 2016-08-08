@@ -1,0 +1,7 @@
+foo:
+  build: .
+  ports:
+    - '4200:4200'
+  volumes:
+    - .:/home/app/foo
+    - /home/app/foo/node_modules
