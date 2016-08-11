@@ -1,4 +1,4 @@
-FROM angular-cli:1.0.0-beta.11
+FROM angular-cli:1.0.0-beta.11-webpack.2
 
 ENV HOME=/home/app
 ENV APP_NAME=foo
@@ -13,4 +13,4 @@ WORKDIR $HOME/$APP_NAME
 RUN npm install &&\
 	npm cache clean
 
-CMD ["ng", "serve"]
+CMD ["ng", "serve", "--host", "0.0.0.0"]

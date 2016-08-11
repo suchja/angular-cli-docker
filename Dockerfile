@@ -6,6 +6,6 @@ RUN useradd --user-group --create-home --shell /bin/false app
 ENV HOME=/home/app
 WORKDIR $HOME
 
-RUN npm install -g angular-cli@webpack && npm cache clean
+RUN npm install -g angular-cli@1.0.0-beta.11-webpack.2 && npm cache clean
 
 EXPOSE 4200
