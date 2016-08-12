@@ -12,12 +12,12 @@ Once the initial project is created with base Dockerfile, both files from [docke
 
 ## Creating a new Angular 2 App
 
-You simply copy the [Dockerfile](Dockerfile) and call `docker build -t angular-cli:1.0.0-beta.11 .` in the same folder. This will create an image containing the appropriate angular-cli version.
+You simply copy the [Dockerfile](Dockerfile) and call `docker build -t angular-cli:1.0.0-beta.11-webpack.2 .` in the same folder. This will create an image containing the appropriate angular-cli version.
 
 This new image can now be used to create the basis for your new Angular 2 App. Simply call 
 
 ```
-docker run -it --rm --name create-angular-project -v "$PWD":/home/app angular-cli:1.0.0-beta.11 ng new -sn APP_NAME
+docker run -it --rm --name create-angular-project -v "$PWD":/home/app angular-cli:1.0.0-beta.11-webpack.2 ng new -sn APP_NAME
 ```
 
 Obviously you should replace `APP_NAME` with the name of the app you like to build.
