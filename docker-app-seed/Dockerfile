@@ -1,4 +1,4 @@
-FROM angular-cli:1.0.0-beta.11-webpack.2
+FROM angular-cli:1.0.0-beta.16
 
 ENV HOME=/home/app
 ENV APP_NAME=foo
