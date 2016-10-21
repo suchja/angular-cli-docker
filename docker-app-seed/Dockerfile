@@ -1,4 +1,4 @@
-FROM angular-cli:1.0.0-beta.17
+FROM angular-cli:1.0.0-beta.18
 
 ENV HOME=/home/app
 ENV APP_NAME=foo
