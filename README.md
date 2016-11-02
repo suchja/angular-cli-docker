@@ -6,18 +6,18 @@ This project contains my initial thoughts for easily creating, developing and ru
 
 ## General Idea
 
-This project provides 2 Dockerfiles. The first [Dockerfile](Dockerfile) is contained in root and responsible for setting up an image containing a specific version (currently this is v1.0.0-beta.18) of angular-cli. It also prepares a non-root user. However, this shouldn't be used until the initial project is created with `ng new`. Root permissions are required to create the project.
+This project provides 2 Dockerfiles. The first [Dockerfile](Dockerfile) is contained in root and responsible for setting up an image containing a specific version (currently this is v1.0.0-beta.19) of angular-cli. It also prepares a non-root user. However, this shouldn't be used until the initial project is created with `ng new`. Root permissions are required to create the project.
 
 Once the initial project is created with base Dockerfile, both files from [docker-app-seed](docker-app-seed) can be copied into the newly created Angular 2 App. These files allow installing all dependencies inside a container and running project specific commands offered by angular-cli (e.g. `ng serve`).
 
 ## Creating a new Angular 2 App
 
-You simply copy the [Dockerfile](Dockerfile) and call `docker build -t angular-cli:1.0.0-beta.18 .` in the same folder. This will create an image containing the appropriate angular-cli version.
+You simply copy the [Dockerfile](Dockerfile) and call `docker build -t angular-cli:1.0.0-beta.19 .` in the same folder. This will create an image containing the appropriate angular-cli version.
 
 This new image can now be used to create the basis for your new Angular 2 App. Simply call 
 
 ```
-docker run -it --rm --name create-angular-project -v "$PWD":/home/app angular-cli:1.0.0-beta.18 ng new -sn APP_NAME
+docker run -it --rm --name create-angular-project -v "$PWD":/home/app angular-cli:1.0.0-beta.19 ng new -sn APP_NAME
 ```
 
 Obviously you should replace `APP_NAME` with the name of the app you like to build.
